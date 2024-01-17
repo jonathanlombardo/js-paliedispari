@@ -82,3 +82,35 @@ function isOdd(number) {
     return true;
   }
 }
+
+function setInvalidField(element) {
+  element.classList.add("border", "border-danger");
+}
+
+function unSetInvalidField(element) {
+  element.classList.remove("border", "border-danger");
+}
+
+function setActiveBtn(element) {
+  if (element.className.includes("primary")) {
+    const activeChoiseEl = document.querySelector(".btn-primary");
+
+    if (activeChoiseEl) {
+      activeChoiseEl.classList.remove("btn-primary");
+      activeChoiseEl.classList.add("btn-outline-primary");
+    }
+
+    element.classList.remove("btn-outline-primary");
+    element.classList.add("btn-primary");
+  } else if (element.className.includes("success")) {
+    const activeNumberChoiseEl = document.querySelector(".btn-success");
+
+    if (activeNumberChoiseEl) {
+      activeNumberChoiseEl.classList.remove("btn-success");
+      activeNumberChoiseEl.classList.add("btn-outline-success");
+    }
+
+    element.classList.remove("btn-outline-success");
+    element.classList.add("btn-success");
+  }
+}
