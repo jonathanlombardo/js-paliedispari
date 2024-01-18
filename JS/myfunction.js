@@ -47,6 +47,7 @@ function getRandomLetter() {
 
 /**
  *
+ * @param {number} number number to check
  * @returns {boolean} returns true if number is even
  */
 function isEven(number) {
@@ -57,15 +58,12 @@ function isEven(number) {
     return NaN;
   }
 
-  if (number % 2 == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return number % 2 == 0;
 }
 
 /**
  *
+ * @param {number} number number to check
  * @returns {boolean} returns true if number is odd
  */
 function isOdd(number) {
@@ -76,11 +74,7 @@ function isOdd(number) {
     return NaN;
   }
 
-  if (number % 2 == 0) {
-    return false;
-  } else {
-    return true;
-  }
+  return !(number % 2 == 0);
 }
 
 function setInvalidField(element) {
