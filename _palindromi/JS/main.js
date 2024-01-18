@@ -1,14 +1,14 @@
 function isPalind(string) {
+  string = string.toLowerCase().trim();
   const length = string.length;
-  let result = true;
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length / 2; i++) {
     if (string[i] != string[length - i - 1]) {
-      result = false;
+      return false;
     }
   }
 
-  return result;
+  return true;
 }
 
 const runButton = document.querySelector(".btn");
